@@ -1,4 +1,4 @@
-<? php
+<?php
 
 /**
  * Mpesa Payment Method for CampTix
@@ -24,6 +24,7 @@ class Camptix_Payment_Method_Mpesa extends Camptix_Payment_Method
         'refund_single'=>false,
         'refund_all' => false,
     );
+
     /**
      * an array to store the options
      */
@@ -31,5 +32,22 @@ class Camptix_Payment_Method_Mpesa extends Camptix_Payment_Method
 
     function camptix_init(){
         //merchant details should be loaded here
+        $this->options = array_merge(array(
+            'pay_bill_number' => '',
+            'account_number' => '',
+            'payload_url' => '',
+            'merchant_name' => '',
+        ), $this->get_payment_options());
+
+        add_action('template_redirect',array($this, 'template_redirect'));
+    }
+
+    function payment_settings_field(){
+        if (count($this->get_predefined_accounts())>0) {
+            # code...
+            //chack if there were existing paybil numbers
+            $this->add_settings_field_helper( 'paybill_number', __( 'Predefined Paybill', '888888' ), array( $this, 'field_paybill_number'	) );
+        }
+        //define all the other fields, therefore
     }
 }

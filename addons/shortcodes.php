@@ -22,6 +22,7 @@ class CampTix_Addon_Shortcodes extends CampTix_Addon {
 		add_shortcode( 'camptix_attendees', array( $this, 'shortcode_attendees' ) );
 		add_shortcode( 'camptix_stats', array( $this, 'shortcode_stats' ) );
 		add_shortcode( 'camptix_private', array( $this, 'shortcode_private' ) );
+		add_shortcode( 'Camptix_paybill_number', array( $this, 'shortcode_paybill_number'));
 
 		// Pre-cache attendees list markup
 		if ( ! wp_next_scheduled( 'camptix_cache_all_attendees_shortcodes' ) ) {

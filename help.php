@@ -180,6 +180,9 @@ function tix_contextual_help() {
 
 				<h4>PayPal Express Checkout</h4>
 				<p>To use Express Checkout you'll need to obtain your API credentials from PayPal. Please note, that these are not your PayPal e-mail and password. Read the <a href='https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_api_ECAPICredentials'>Creating an API Signature</a> for more information. If you want to test your payments before going public, please refer to the <a href='https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/howto_testing_sandbox'>PayPal Sandbox</a> guide.</p>
+
+				<h4>Mpesa Paybill Checkout</h4>
+				<p>To Use Mpesa Checkout You'll need a paybill number etc</p>
 			",
 		) );
 

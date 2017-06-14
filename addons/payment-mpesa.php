@@ -49,5 +49,6 @@ class Camptix_Payment_Method_Mpesa extends Camptix_Payment_Method
             $this->add_settings_field_helper( 'paybill_number', __( 'Predefined Paybill', '888888' ), array( $this, 'field_paybill_number'	) );
         }
         //define all the other fields, therefore
+        
     }
 }

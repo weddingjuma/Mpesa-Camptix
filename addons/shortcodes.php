@@ -677,6 +677,11 @@ class CampTix_Addon_Shortcodes extends CampTix_Addon {
 		$view_token = md5( 'tix-view-token-' . strtolower( $email . $ip ) );
 		return $view_token;
 	}
+
+	public function lipa_na_mpesa_gateway()
+	{
+		
+	}
 }
 
 // Register this class as a CampTix Addon.
